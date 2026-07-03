@@ -1,15 +1,15 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
-  name: rollouts-test-1
+  name: rollouts-test
 spec:
   selector:
     matchLabels:
-      app: rollouts-test-1
+      app: rollouts-test
   template:
     metadata:
       labels:
-        app: rollouts-test-1
+        app: rollouts-test
     spec:
       containers:
         - name: app
