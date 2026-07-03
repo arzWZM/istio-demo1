@@ -3,6 +3,9 @@ kind: Rollout
 metadata:
   name: rollouts-test-2
 spec:
+  selector:
+    matchLabels:
+      app: rollouts-test-2
   template:
     metadata:
       labels:
