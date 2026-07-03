@@ -4,7 +4,7 @@ metadata:
   name: canary-svc
 spec:
   ports:
-  - port: 80
+  - port: 8080
     targetPort: http
     protocol: TCP
     name: http
@@ -19,7 +19,7 @@ metadata:
   name: stable-svc
 spec:
   ports:
-  - port: 80
+  - port: 8080
     targetPort: http
     protocol: TCP
     name: http
