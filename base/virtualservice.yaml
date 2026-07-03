@@ -12,7 +12,7 @@ spec:
     route:
     - destination:
         host: stable-svc # referenced in canary.stableService
-      weight: 80
+      weight: 50
     - destination:
         host: canary-svc # referenced in canary.canaryService
-      weight: 20
+      weight: 50
