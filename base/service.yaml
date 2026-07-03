@@ -10,7 +10,6 @@ spec:
     name: http
   selector:
     app: rollouts-test-2
-    version: v2
     # This selector will be updated with the pod-template-hash of the canary ReplicaSet. e.g.:
     # rollouts-pod-template-hash: 7bf84f9696
 ---
@@ -26,6 +25,5 @@ spec:
     name: http
   selector:
     app: rollouts-test-1
-    version: v1
     # This selector will be updated with the pod-template-hash of the stable ReplicaSet. e.g.:
     # rollouts-pod-template-hash: 123746c88d
