@@ -6,6 +6,7 @@ spec:
   selector:
     matchLabels:
       app: rollouts-test-1
+      version: v1
   template:
     metadata:
       labels:
