@@ -7,3 +7,12 @@ spec:
   - istio-rollout-gateway
   hosts:
   - istio-rollout.dev.argoproj.io
+  http:
+  - name: primary        # referenced in canary.trafficRouting.istio.virtualService.routes
+    route:
+    - destination:
+        host: stable-svc # referenced in canary.stableService
+      weight: 80
+    - destination:
+        host: canary-svc # referenced in canary.canaryService
+      weight: 20
