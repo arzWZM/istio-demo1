@@ -10,7 +10,7 @@ spec:
     - port:  
         name: https
         number: 443
-        protocol: TLS        
+        protocol: HTTPS        
       hosts:
         - "*"       
       tls:
