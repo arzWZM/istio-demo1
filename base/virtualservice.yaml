@@ -8,7 +8,10 @@ spec:
   hosts:
   - "istio-rollout.local"
   http:
-  - name: primary        # referenced in canary.trafficRouting.istio.virtualService.routes
+    - match:
+	  uri:
+	    prefix: /
+    - name: primary        # referenced in canary.trafficRouting.istio.virtualService.routes          
     route:
     - destination:
         host: stable-svc # referenced in canary.stableService
