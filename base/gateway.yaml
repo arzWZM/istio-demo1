@@ -5,20 +5,20 @@ metadata:
   namespace: istio-system
 spec:
   selector:
-    istio: istio-ingressgateway
+    istio: ingressgateway
   servers:
     - port:
         name: http
         number: 80
         protocol: HTTP
       hosts:
-        - "istio-rollout.local"
+        - "*"
     - port:  
         name: https
         number: 443
         protocol: TLS        
       hosts:
-        - "istio-rollout.local"       
+        - "*"       
       tls:
         mode: SIMPLE
         credentialName: example-credential
