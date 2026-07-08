@@ -7,7 +7,7 @@ spec:
   - port: 80
     targetPort: 8080
     protocol: TCP
-    name: http-web
+    name: http
   selector:
     app: rollouts-test
     # This selector will be updated with the pod-template-hash of the canary ReplicaSet. e.g.:
@@ -22,7 +22,7 @@ spec:
   - port: 80
     targetPort: 8080
     protocol: TCP
-    name: http-web
+    name: http
   selector:
     app: rollouts-test
     # This selector will be updated with the pod-template-hash of the stable ReplicaSet. e.g.:
