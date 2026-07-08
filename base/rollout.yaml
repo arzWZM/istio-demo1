@@ -28,7 +28,3 @@ spec:
             name: rollout-vsvc   # required
             routes:
             - primary            # optional if there is a single route in VirtualService, required otherwise   
-      steps:
-      - setWeight: 5
-      - pause:
-          duration: 10m
