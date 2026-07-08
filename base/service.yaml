@@ -42,3 +42,18 @@ spec:
     app: rollouts-test
     # This selector will be updated with the pod-template-hash of the stable ReplicaSet. e.g.:
     # rollouts-pod-template-hash: 123746c88d
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: stable-svc-tls-passthrough
+spec:
+  ports:
+  - port: 10443
+    targetPort: 8443
+    protocol: TCP
+    name: https-passthrough
+  selector:
+    app: rollouts-test
+    # This selector will be updated with the pod-template-hash of the stable ReplicaSet. e.g.:
+    # rollouts-pod-template-hash: 123746c88d
