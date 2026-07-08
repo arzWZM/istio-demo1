@@ -10,12 +10,12 @@ spec:
     - port:
     - name: http
       number: 80
-        protocol: HTTP
+      protocol: HTTP
     - name: https
       number: 443
-        protocol: HTTPS
+      protocol: HTTPS
       tls:
         mode: SIMPLE
-          credentialName: example-credential
+        credentialName: example-credential
       hosts:
       - "istio-rollout.local"
