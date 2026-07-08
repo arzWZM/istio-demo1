@@ -20,5 +20,5 @@ spec:
       hosts:
         - "istio-rollout.local"       
       tls:
-        mode: SIMPLE
+        mode: PASSTHROUGH
         credentialName: example-credential
