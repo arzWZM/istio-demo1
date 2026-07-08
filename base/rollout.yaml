@@ -12,7 +12,7 @@ spec:
         app: rollouts-test
     spec:
       containers:
-        - name: app
+        - name: rollouts-test
           image: argoproj/rollouts-demo:blue
           ports:
           - name: http
