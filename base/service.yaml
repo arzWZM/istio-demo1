@@ -5,7 +5,7 @@ metadata:
 spec:
   ports:
   - port: 443
-    targetPort: 8080
+    targetPort: 8443
     protocol: TCP
     name: http
   selector:
@@ -20,7 +20,7 @@ metadata:
 spec:
   ports:
   - port: 443
-    targetPort: 8080
+    targetPort: 8443
     protocol: TCP
     name: http
   selector:
