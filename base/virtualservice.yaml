@@ -10,12 +10,15 @@ spec:
   http:
   - name: primary        # referenced in canary.trafficRouting.istio.virtualService.routes  
     match:
-    - uri:
-      prefix: /        
+    - port: 10443
+      sniHost: 
+        - istio-rollout.local
     route:
     - destination:
         host: stable-svc # referenced in canary.stableService
+        port: 443
       weight: 100
     - destination:
         host: canary-svc # referenced in canary.canaryService
+        port: 443
       weight: 0
