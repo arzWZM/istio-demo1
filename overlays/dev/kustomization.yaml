@@ -4,4 +4,3 @@ bases:
 - ../../base
 patchesStrategicMerge:
 - rollout.yaml
-- service.yaml
