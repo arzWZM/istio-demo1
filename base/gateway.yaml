@@ -8,7 +8,7 @@ spec:
     istio: ingressgateway
   servers:
   - hosts:
-    - "*"
+    - "istio-rollout.local"
     port:
       name: http
       number: 80
