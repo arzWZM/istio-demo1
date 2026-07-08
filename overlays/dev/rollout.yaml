@@ -12,20 +12,4 @@ spec:
           - name: http
             containerPort: 80
             protocol: TCP      
----
-apiVersion: gateway.networking.istio.io/v1            
-kind: Gateway
-metadata:
-  name: ‎istio-rollout-gateway‎
-  namespace: istio-system
-spec:
-  selector:
-    istio: ingressgateway
-  servers:
-  - hosts:
-    - "*.istio-rollout.local"
-    - istio-rollout.local
-    port:
-      name: http
-      number: 80
-      protocol: HTTP
+
