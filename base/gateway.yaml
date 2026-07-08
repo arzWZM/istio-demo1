@@ -11,11 +11,14 @@ spec:
     - name: http
       number: 80
       protocol: HTTP
+      hosts:
+      - "istio-rollout.local"
     - name: https
       number: 443
       protocol: HTTPS
-      tls:
+      hosts:
+       - "istio-rollout.local"      
+    - tls:
         mode: SIMPLE
         credentialName: example-credential
-    - hosts:
-      - "istio-rollout.local"
+
