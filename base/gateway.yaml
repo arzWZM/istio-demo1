@@ -1,16 +1,19 @@
-apiVersion: networking.istio.io/v1
-kind: Gateway
+apiVersion: networking.k8s.io/v1
+kind: Ingress
 metadata:
-  name: istio-rollout-gateway
-  namespace: istio-system
+  name: rollouts-demo-stable
+  annotations:
+    kubernetes.io/ingress.class: nginx
 spec:
-  selector:
-    istio: ingressgateway
-  servers:
-  - hosts:
-    - "*.istio-rollout.local"
-    - istio-rollout.local
-    port:
-      name: http
-      number: 80
-      protocol: HTTP
+  rules:
+  - host: istio-rollout.local
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            # Reference to a Service name, also specified in the Rollout spec.strategy.canary.stableService field
+            name: stable-svc
+            port:
+              number: 80
