@@ -16,7 +16,7 @@ spec:
     - port:  
         name: https
         number: 443
-        protocol: HTTPS        
+        protocol: TLS        
       hosts:
         - "istio-rollout.local"       
       tls:
