@@ -8,15 +8,14 @@ spec:
     istio: ingressgateway
   servers:
     - port:
-	    - name: http
-	      number: 80
-		    protocol: HTTP
-	    - name: https
-	      number: 443
-		    protocol: HTTPS
-	    tls:
-	      mode: SIMPLE
-		    credentialName: example-credential
-	    hosts:
-	    - "istio-rollout.local"  
-	  
+    - name: http
+      number: 80
+        protocol: HTTP
+    - name: https
+      number: 443
+        protocol: HTTPS
+      tls:
+        mode: SIMPLE
+          credentialName: example-credential
+      hosts:
+      - "istio-rollout.local"
