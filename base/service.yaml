@@ -27,19 +27,4 @@ spec:
     app: rollouts-test
     # This selector will be updated with the pod-template-hash of the stable ReplicaSet. e.g.:
     # rollouts-pod-template-hash: 123746c88d
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: http-web
-spec:
-  ports:
-  - port: 80
-    targetPort: 8080
-    protocol: TCP
-    name: http-web
-  selector:
-    app: rollouts-test
-    # This selector will be updated with the pod-template-hash of the stable ReplicaSet. e.g.:
-    # rollouts-pod-template-hash: 123746c88d
     
