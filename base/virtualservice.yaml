@@ -9,8 +9,8 @@ spec:
   - "istio-rollout.local"
   http:
     - match:
-	  - uri:
-	      prefix: /
+      - uri:
+        prefix: /
     - name: primary        # referenced in canary.trafficRouting.istio.virtualService.routes          
       route:
       - destination:
