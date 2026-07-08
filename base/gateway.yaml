@@ -24,3 +24,12 @@ spec:
       tls:
         mode: SIMPLE
         credentialName: example-credential
+    - port:  
+        name: https-passthrough
+        number: 10443
+        protocol: HTTPS        
+      hosts:
+        - "istio-rollout.local"       
+      tls:
+        mode: PASSTHROUGH
+        credentialName: example-credential
