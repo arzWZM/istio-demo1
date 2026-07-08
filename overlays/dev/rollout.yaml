@@ -13,7 +13,7 @@ spec:
             containerPort: 80
             protocol: TCP      
 ---
-apiVersion: gateway.networking.k8s.io/v1
+apiVersion: gateway.networking.istio.io/v1            
 kind: Gateway
 metadata:
   name: ‎istio-rollout-gateway‎
