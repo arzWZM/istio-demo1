@@ -15,12 +15,12 @@ spec:
         - istio-rollout.local
     route:
     - destination:
-        host: stable-svc # referenced in canary.stableService
+        host: stable-svc.default.svc.cluster.local # referenced in canary.stableService
         port: 
           number: 443
       weight: 100
     - destination:
-        host: canary-svc # referenced in canary.canaryService
+        host: canary-svc.default.svc.cluster.local # referenced in canary.canaryService
         port: 
           number: 443
       weight: 0
