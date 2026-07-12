@@ -7,9 +7,9 @@ spec:
     spec:
       containers:
         - name: rollouts-test
-          image: nginx:stable
+          image: argoproj/rollouts-demo:blue
           ports:
           - name: http
-            containerPort: 80
+            containerPort: 8080
             protocol: TCP      
 
