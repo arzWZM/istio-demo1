@@ -7,14 +7,6 @@ spec:
   selector:
     istio: ingressgateway
   servers:
-    - port:
-        name: http
-        number: 80
-        protocol: HTTP
-      #tls:
-       #httpsRedirect: true
-      hosts:
-        - "istio-rollout.local"  
     - port:  
         name: https
         number: 443
