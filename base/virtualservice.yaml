@@ -4,7 +4,7 @@ metadata:
   name: rollout-vsvc
 spec:
   hosts:
-  - "istio-rollout.local"
+  - istio-rollout.local
   http:
   - name: primary        # referenced in canary.trafficRouting.istio.virtualService.routes
     match:
