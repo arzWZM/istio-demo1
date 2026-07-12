@@ -4,5 +4,6 @@ kind: Kustomization
 resources:
   - rollout.yaml
   - example-credential.yaml
+  - gateway.yaml
   - service.yaml
-  - test-ingress.yaml
+  - virtualservice.yaml
