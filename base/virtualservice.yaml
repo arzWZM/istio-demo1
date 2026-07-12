@@ -3,6 +3,8 @@ kind: VirtualService
 metadata:
   name: rollout-vsvc
 spec:
+  gateways:
+  - istio-rollout-gateway
   hosts:
   - istio-rollout.local
   http:
