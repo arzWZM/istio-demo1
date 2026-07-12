@@ -8,8 +8,7 @@ spec:
   hosts:
   - "istio-rollout.local"
   tls:
-  - name: primary        # referenced in canary.trafficRouting.istio.virtualService.routes  
-    match:
+  - match:
     - port: 10443
       sniHosts: 
       - istio-rollout.local    
