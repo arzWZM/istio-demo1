@@ -9,7 +9,7 @@ spec:
   servers:
     - port:  
         name: https
-        number: 8443
+        number: 443
         protocol: HTTPS
       hosts:
         - "istio-rollout.local"       
