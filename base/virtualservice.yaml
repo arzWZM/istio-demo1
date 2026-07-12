@@ -11,7 +11,7 @@ spec:
   - name: primary        # referenced in canary.trafficRouting.istio.virtualService.routes  
     match:
     - port: 10443
-      sniHost: 
+      sni_hosts: 
         - istio-rollout.local    
     route:
     - destination:
