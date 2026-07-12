@@ -9,6 +9,9 @@ spec:
   - istio-rollout.local
   http:
   - name: primary        # referenced in canary.trafficRouting.istio.virtualService.routes
+    match:
+    - uri:
+        prefix: "/"  
     route:
     - destination:
         host: stable-svc.default.svc.cluster.local # referenced in canary.stableService
