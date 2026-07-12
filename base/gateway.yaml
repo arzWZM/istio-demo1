@@ -14,13 +14,13 @@ spec:
       #tls:
        #httpsRedirect: true
       hosts:
-        - "*"  
+        - "istio-rollout.local"  
     - port:  
         name: https
         number: 443
         protocol: HTTPS        
       hosts:
-        - "*"       
+        - "istio-rollout.local"       
       tls:
         mode: SIMPLE
         credentialName: example-credential    
