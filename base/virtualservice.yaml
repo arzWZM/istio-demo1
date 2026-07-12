@@ -7,12 +7,12 @@ spec:
   - istio-system/istio-rollout-gateway
   hosts:
   - "istio-rollout.local"
-  http:
+  tls:
   - name: primary        # referenced in canary.trafficRouting.istio.virtualService.routes  
     match:
     - port: 10443
       sniHosts: 
-      - istio-rollout2.local    
+      - istio-rollout.local    
     route:
     - destination:
         host: stable-svc.default.svc.cluster.local # referenced in canary.stableService
