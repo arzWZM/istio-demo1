@@ -14,7 +14,7 @@ spec:
       #tls:
        #httpsRedirect: true
       hosts:
-        - "istio-rollout.local"  
+        - "*"  
     - port:  
         name: https
         number: 443
