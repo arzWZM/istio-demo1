@@ -25,11 +25,8 @@ spec:
       canaryService: canary-svc  # required
       stableService: stable-svc  # required
       trafficRouting:
-        istio:
-          virtualService:
-            name: rollout-vsvc   # required
-            routes:
-            - primary            # optional if there is a single route in VirtualService, required otherwise   
+        nginx:
+          stableIngress: virtual-service-demo-1
       steps:
       - setWeight: 5
       - pause:
