@@ -15,7 +15,11 @@ spec:
     route:
     - destination:
         host: stable-svc.default.svc.cluster.local # referenced in canary.stableService
+        port:
+          number: 80
       weight: 100
     - destination:
         host: canary-svc.default.svc.cluster.local # referenced in canary.canaryService
+        port:
+          number: 80
       weight: 0
