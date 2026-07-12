@@ -17,7 +17,7 @@ spec:
         - name: rollouts-test
           image: argoproj/rollouts-demo:blue
           ports:
-          - name: http
+          - name: https
             containerPort: 8080
             protocol: TCP          
   strategy:
