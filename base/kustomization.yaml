@@ -3,6 +3,7 @@ kind: Kustomization
 
 resources:
   - rollout.yaml
+  - PeerAuthentication.yaml
   - example-credential.yaml
   - gateway.yaml
   - service.yaml
