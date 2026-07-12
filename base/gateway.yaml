@@ -20,7 +20,7 @@ spec:
         number: 443
         protocol: HTTPS        
       hosts:
-        - "istio-rollout.local"       
+        - "*"       
       tls:
         mode: SIMPLE
         credentialName: example-credential    
