@@ -12,7 +12,7 @@ spec:
     match:
     - port: 10443
       sniHosts: 
-      - istio-rollout.local    
+      - istio-rollout2.local    
     route:
     - destination:
         host: stable-svc.default.svc.cluster.local # referenced in canary.stableService
