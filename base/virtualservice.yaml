@@ -11,8 +11,8 @@ spec:
   - name: primary        # referenced in canary.trafficRouting.istio.virtualService.routes
     route:
     - destination:
-        host: stable-svc # referenced in canary.stableService
+        host: stable-svc.default.svc.cluster.local # referenced in canary.stableService
       weight: 100
     - destination:
-        host: canary-svc # referenced in canary.canaryService
+        host: canary-svc.default.svc.cluster.local # referenced in canary.canaryService
       weight: 0
