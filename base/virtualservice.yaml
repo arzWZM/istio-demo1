@@ -7,7 +7,7 @@ spec:
   - istio-system/istio-rollout-gateway
   hosts:
   - "istio-rollout.local"
-  https:
+  http:
   - name: primary        # referenced in canary.trafficRouting.istio.virtualService.routes
     match:
     - uri:
