@@ -3,8 +3,10 @@ kind: Kustomization
 
 resources:
   - rollout.yaml
+  - service.yaml
+  - virtualservice.yaml
   - PeerAuthentication.yaml
   - istio-example-credential.yaml
   - gateway.yaml
-  - service.yaml
-  - virtualservice.yaml
+
+
